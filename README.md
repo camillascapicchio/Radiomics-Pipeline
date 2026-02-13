@@ -22,15 +22,15 @@ pip install -r requirements.txt
 
 **Struttura del Progetto**:
 
-```pythonextract_radiiomics_features.ipynb```: Versione Jupyter Notebook per analisi interattiva.
+```extract_radiiomics_features.ipynb```: Versione Jupyter Notebook per analisi interattiva.
 
-```pythonextract_radiiomics_features.py```: Versione in Python per l'esecuzione da riga di comando.
+```extract_radiiomics_features.py```: Versione in Python per l'esecuzione da riga di comando.
 
-```pythonParams_tol_0_0001.yml```: File di configurazione con i parametri di estrazione (es. binWidth, resampledPixelSpacing, filtri).
+```Params_tol_0_0001.yml```: File di configurazione con i parametri di estrazione (es. binWidth, resampledPixelSpacing, filtri).
 
-```pythonData/```: Cartella con i dati di input.
+```Data/```: Cartella con i dati di input.
 
-```pythonrequirements.txt```: Elenco dei pacchetti Python necessari.
+```requirements.txt```: Elenco dei pacchetti Python necessari.
 
 **Come usare lo script**
 
