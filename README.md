@@ -11,7 +11,7 @@ La pipeline processa coppie di file (Immagine CT + Maschera Binaria dei polmoni)
 ```bash
 conda create --name radiomics_env python=3.9
 conda activate radiomics_env
-```bash
+```
 
 *Installare le dipendenze*: installare prima il pacchetto *numpy*.
 ```bash
