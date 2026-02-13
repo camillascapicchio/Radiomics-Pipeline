@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 **Struttura del Progetto**:
 
-*extract_radiiomics_features.ipynb*: Versione Jupyter Notebook per analisi interattiva.
+```pythonextract_radiiomics_features.ipynb```: Versione Jupyter Notebook per analisi interattiva.
 
 *extract_radiiomics_features.py*: Versione in Python per l'esecuzione da riga di comando.
 
@@ -62,6 +62,7 @@ Argomenti disponibili:
 --verbose: Flag per visualizzare i dettagli dei filtri e delle feature abilitate.
 
 **Funzionamento**: 
+
 Lo script ordina e accoppia automaticamente immagini e maschere basandosi sulla numerazione presente nel nome del file.
 
 Utilizza SimpleITK per leggere i volumi NIfTI.
