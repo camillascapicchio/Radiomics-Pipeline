@@ -67,7 +67,7 @@ Argomenti disponibili:
 
 2. Utilizza SimpleITK per leggere i volumi NIfTI.
 
-***Importante*** Assicurati che l'immagine e la maschera abbiano la stessa geometria (origine, spaziatura e orientamento), altrimenti PyRadiomics solleverà un errore di Mismatch.
+*Importante* Assicurati che l'immagine e la maschera abbiano la stessa geometria (origine, spaziatura e orientamento), altrimenti PyRadiomics solleverà un errore di Mismatch.
 
 3. Output: - Genera un file .csv per ogni paziente nella cartella di output scelta.
 
