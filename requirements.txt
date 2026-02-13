@@ -1,0 +1,4 @@
+pyradiomics==3.0.1
+pandas>=1.5
+SimpleITK>=2.1
+PyWavelets>=1.1
