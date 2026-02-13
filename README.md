@@ -14,13 +14,21 @@ conda create --name radiomics_env python=3.9
 conda activate radiomics_env
 ```
 
-*Installare le dipendenze*: installare prima il pacchetto *numpy*.
+*Installare le dipendenze*:
 ```bash
 conda install numpy
 pip install -r requirements.txt
 ```
 
-📂 Struttura del Progettoradiomics_extraction.py: Script principale per l'esecuzione da riga di comando.radiomics_notebook.ipynb: Versione Jupyter Notebook per analisi interattiva.params.yml: File di configurazione con i parametri di estrazione (es. binWidth, resampledPixelSpacing, filtri).data/: Cartella suggerita per i dati di input.requirements.txt: Elenco dei pacchetti Python necessari.🚀 Come usare lo scriptLo script radiomics_extraction.py accetta diversi argomenti per gestire i percorsi dei dati e i parametri.Esempio di utilizzo:Bashpython radiomics_extraction.py \
+**Struttura del Progetto**:
+
+*extract_radiiomics_features.ipynb*: Versione Jupyter Notebook per analisi interattiva.
+*extract_radiiomics_features.py*: Versione in Python per l'esecuzione da riga di comando.
+*Params_tol_0_0001.yml*: File di configurazione con i parametri di estrazione (es. binWidth, resampledPixelSpacing, filtri).
+*Data/*: Cartella con i dati di input.
+*requirements.txt*: Elenco dei pacchetti Python necessari.
+
+Come usare lo scriptLo script radiomics_extraction.py accetta diversi argomenti per gestire i percorsi dei dati e i parametri.Esempio di utilizzo:Bashpython radiomics_extraction.py \
     --data_path ./data/images \
     --mask_path ./data/masks \
     --param_file params.yml \
