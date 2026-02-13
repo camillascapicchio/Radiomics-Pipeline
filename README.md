@@ -6,7 +6,8 @@ Questo repository contiene il codice per l'estrazione di feature radiomiche da q
 
 La pipeline processa coppie di file (Immagine CT + Maschera Binaria dei polmoni), calcola le caratteristiche morfologiche, statistiche e di texture, e salva i risultati in file CSV individuali e in un CSV riassuntivo contenente le features di tutti i pazienti.
 
-**Prerequisiti**: Il progetto è sviluppato in Python. Per garantire la compatibilità delle dipendenze (specialmente per pyradiomics), si consiglia l'uso di Conda.\\
+**Prerequisiti**: Il progetto è sviluppato in Python. Per garantire la compatibilità delle dipendenze (specialmente per pyradiomics), si consiglia l'uso di Conda. 
+
 *Configurazione Ambiente*: 
 ```bash
 conda create --name radiomics_env python=3.9
