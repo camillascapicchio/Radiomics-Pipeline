@@ -35,14 +35,39 @@ pip install -r requirements.txt
 **Come usare lo script**
 
 Lo script *extract_radiiomics_features.py* accetta diversi argomenti per gestire i percorsi dei dati e i parametri.
+
 *Esempio di utilizzo*:
 ```bash
-python radiomics_extraction.py \
-    --data_path ./data/images \
-    --mask_path ./data/masks \
-    --param_file params.yml \
-    --output_dir ./Results \
-    --total_csv Final_Features.csv
-```
+python3 extract_radiomics_features.py \
+    --data_path Data/CT \
+    --mask_path Data/Masks_Lung \
+    --param_file Params_tol_0_0001.yaml \
+    --output_dir Features \
+    --total_csv Total_features.csv \
+    --verbose
 
-Argomenti disponibili:ArgomentoDescrizione--data_path(Obbligatorio) Percorso alla cartella con le immagini CT.--mask_path(Obbligatorio) Percorso alla cartella con le maschere (_Lung.nii.gz).--param_file(Obbligatorio) File YAML con i settaggi di PyRadiomics.--output_dirCartella dove verranno salvati i CSV dei singoli soggetti (Default: Features).--total_csvNome del file CSV finale che aggrega tutti i soggetti.--verboseFlag per visualizzare i dettagli dei filtri e delle feature abilitate.🛠 Funzionamento InternoAllineamento: Lo script ordina e accoppia automaticamente immagini e maschere basandosi sulla numerazione presente nel nome del file.Estrazione: Utilizza SimpleITK per leggere i volumi NIfTI.Output: - Genera un file .csv per ogni paziente nella cartella di output scelta.Genera un file CSV globale (Total_features.csv) ideale per analisi statistiche o Machine Learning.[!IMPORTANT]Assicurati che l'immagine e la maschera abbiano la stessa geometria (origine, spaziatura e orientamento), altrimenti PyRadiomics solleverà un errore di Mismatch.📊 Esempio di OutputIl file CSV finale conterrà colonne relative a:Shape features (Volume, Superficie, Sfericità...)First Order statistics (Media, Deviazione Standard, Entropia...)Texture features (GLCM, GLRLM, GLSZM, NgTDM)
+```
+Argomenti disponibili:
+
+--data_path(Obbligatorio): Percorso alla cartella con le immagini CT.
+
+--mask_path(Obbligatorio): Percorso alla cartella con le maschere (_Lung.nii.gz).
+
+--param_file(Obbligatorio): File YAML con i parametri per l'estrazione usati da PyRadiomics.
+
+--output_dir: Cartella dove verranno salvati i CSV dei singoli soggetti (Default: Features).
+
+--total_csv: Nome del file CSV finale che aggrega tutti i soggetti.
+
+--verbose: Flag per visualizzare i dettagli dei filtri e delle feature abilitate.
+
+**Funzionamento**: 
+Lo script ordina e accoppia automaticamente immagini e maschere basandosi sulla numerazione presente nel nome del file.
+
+Utilizza SimpleITK per leggere i volumi NIfTI.
+
+<u>Importante<u> Assicurati che l'immagine e la maschera abbiano la stessa geometria (origine, spaziatura e orientamento), altrimenti PyRadiomics solleverà un errore di Mismatch.
+
+Output: - Genera un file .csv per ogni paziente nella cartella di output scelta.
+
+Genera un file CSV globale (Total_features.csv) che conterrà colonne relative a: Shape features (Volume, Superficie, Sfericità...), First Order statistics (Media, Deviazione Standard, Entropia...), Texture features (GLCM, GLRLM, GLSZM, NgTDM), dati quantitativi ideali per analisi statistiche o Machine Learning.
