@@ -2,7 +2,7 @@
 
 ## Radiomics Extraction Pipeline
 
-Questo repository contiene il codice per l'estrazione di feature radiomiche da qualsiasi immagine medica in formato NIfTI (.nii.gz), utilizzando la libreria [PyRadiomics](https://www.esempio.it](https://pyradiomics.readthedocs.io/en/latest/).
+Questo repository contiene il codice per l'estrazione di feature radiomiche da qualsiasi immagine medica in formato NIfTI (.nii.gz), utilizzando la libreria [PyRadiomics](https://pyradiomics.readthedocs.io/en/latest/).
 
 La pipeline processa coppie di file (Immagine CT + Maschera Binaria dei polmoni), calcola le caratteristiche morfologiche, statistiche e di texture, e salva i risultati in file CSV individuali e in un dataset riassuntivo finale.📋 PrerequisitiIl progetto è sviluppato in Python. Per garantire la compatibilità delle dipendenze (specialmente per pyradiomics), si consiglia l'uso di Conda.Configurazione AmbienteCrea l'ambiente:Bashconda create --name radiomics_env python=3.9
 conda activate radiomics_env
